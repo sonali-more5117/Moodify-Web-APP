@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Moodify App</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../static/style.css">
+        <!-- <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet"> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.5/css/bootstrap.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js" integrity="sha512-WIklPM6qPCIp6d3fSSr90j+1unQHUOoWDS4sdTiR8gxUTnyZ8S2Mr8e10sKKJ/bhJgpAa/qG068RDkg6fIlNFA==" crossorigin="anonymous"></script>
+    </head>
+    <body>
+      <div class="container">
+        <div  class="jumbotron-fluid" style="text-align: center;">
+          <h1>Moodify</h1>
+          <p class="lead">A Music Recommender System for Facial Moods</p>
+          <hr >
+        </div>
+      </div>
+        <!-- <video id="video" width="720px" height="560px" autoplay muted></video>
+        <p id="mood_result">Neutral</p> -->
+        <div class="container" id="jumbo-canvas">
+          <div class="container">
+              <div class="row">
+                <div class="col-sm" >
+                    <h2>Your Mood is: </h2>
+                    <p id="mood_result">Neutral</p>
+                  </div>
+              </div>
+              <button type="submit" id="buttonstyle" onclick="makespotifyrequest()">Submit to Spotify</button>
+              <p id="waiting">Loading AI Model, please wait ...</p>
+              <br>
+          </div>
+
+        </div>
+        <div class="flexbox" id="loadercontainer">
+          <p>Creating Spotify playlist, please wait...&nbsp;&nbsp;</p><br>
+          <div class="loader"></div>
+        </div>
+
+        <script src="../static/face-api.js"></script>
+        <script src="../static/script.js"></script>
+        <!-- <script src="{{ url_for('static', filename='face-api.js') }}"></script>
+        <script src="{{ url_for('static', filename='script.js') }}"></script>
+ -->
+    </body>
+</html>

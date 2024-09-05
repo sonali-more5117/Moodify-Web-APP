@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Moodify App</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../static/style.css">
+        <!-- <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet"> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.5/css/bootstrap.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js" integrity="sha512-WIklPM6qPCIp6d3fSSr90j+1unQHUOoWDS4sdTiR8gxUTnyZ8S2Mr8e10sKKJ/bhJgpAa/qG068RDkg6fIlNFA==" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div  class="jumbotron-fluid" style="text-align: center;">
+              <h1>Moodify</h1>
+              <p class="lead">A Music Recommender System for Facial Moods</p>
+              <hr >
+              </div>
+        </div>
+        <!-- <video id="video" width="720px" height="560px" autoplay muted></video>
+        <p id="mood_result">Neutral</p> -->
+        <div class="container" id="jumbo-canvas">
+		  <p>This application leverages Spotify's Application Programming Interface in order to provide user-specific recommendations based on their facial moods.</p>
+          <div class="spotifyform">
+            <img src="../static/spotify.png" alt="Spotify Logo">
+				<form method="POST">
+					<label for="username">Please enter your Spotify username</label><br>
+					<input type="text" name="username"><br><br>
+					<button type="submit" id="buttonstyle">Submit</button>
+				</form>
+          </div>
+
+        </div>
+    </body>
+</html>
